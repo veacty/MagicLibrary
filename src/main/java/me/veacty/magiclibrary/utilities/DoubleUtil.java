@@ -6,8 +6,8 @@ public final class DoubleUtil {
         throw new UnsupportedOperationException("Utility class can't be initialized");
     }
 
-    public static Double friendlyFormat(Double amount) {
-        int i = (int) (amount * 100);
+    public static Double friendlyFormat(Double number) {
+        int i = (int) (number * 100);
         return i / 100D;
     }
 
