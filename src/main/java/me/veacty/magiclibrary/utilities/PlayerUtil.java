@@ -2,6 +2,8 @@ package me.veacty.magiclibrary.utilities;
 
 import me.veacty.magiclibrary.ItemStackException;
 import org.apache.commons.lang.Validate;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
@@ -22,16 +24,18 @@ public final class PlayerUtil {
     }
 
     public static void addItem(Inventory inventory, ItemStack itemStack) {
-
         if(canPickup(inventory, itemStack)) {
             inventory.addItem(itemStack);
+            return;
         }
+
         throw new ItemStackException("the player has no place in the inventory");
     }
 
     public static void addItems(Inventory inventory, ItemStack... itemStacks) {
         Arrays.stream(itemStacks).forEach(itemStack -> addItem(inventory, itemStack));
     }
+
 
 
 }
