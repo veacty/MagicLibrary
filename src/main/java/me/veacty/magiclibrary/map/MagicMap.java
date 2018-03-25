@@ -12,4 +12,5 @@ public interface MagicMap<K, V> {
 
     Collection<V> values();
 
+
 }

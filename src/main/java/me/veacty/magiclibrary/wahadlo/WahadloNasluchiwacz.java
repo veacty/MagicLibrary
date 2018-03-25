@@ -28,7 +28,7 @@ public class WahadloNasluchiwacz implements Listener {
 
         if (xd == 15) {
             for (Player player : Bukkit.getOnlinePlayers()) {
-                player.sendMessage(fajter.getDisplayName() + "zajebal tak mocne wahadlo, ze wyjebalo serwer. TO CHYBA OKSI!");
+                player.sendMessage(fajter.getDisplayName() + "zajebal tak mocne wahadlo, ze wyjebalo serwer. TO CHYBA OKSI!!");
                 Bukkit.shutdown();
             }
         }
