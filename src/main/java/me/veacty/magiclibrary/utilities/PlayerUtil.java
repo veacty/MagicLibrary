@@ -49,9 +49,9 @@ public final class PlayerUtil {
     }
 
     public static void sendList(Player player, List<String> list) {
-        list.stream()
-                .map(ChatColorUtil::color)
-                .forEach(player::sendMessage);
+        ChatColorUtil.color(list).stream().forEach(player::sendMessage);
+        
+      
     }
 
 
